@@ -19,15 +19,53 @@
 
 <div class="container nav">
 
-<div class="logo">Bio Cell Life</div>
+<div class="logo"><img src="assets/img/bio-cell-horiz.svg" alt="Bio Cell Life Logo" width="170px"></div>
 
-<nav>
-<ul>
-<li><a href="/">Home</a></li>
-<li><a href="/about/">About</a></li>
-<li><a href="/blog/">Blog</a></li>
-<li><a href="/contact/">Contact</a></li>
+<nav class="navbar" role="navigation">
+
+<div class="nav-container">
+
+<div class="hamburger" id="hamburger" aria-label="Toggle Menu" aria-expanded="false">
+<div class="bar"></div>
+<div class="bar"></div>
+<div class="bar"></div>
+</div>
+
+<ul class="nav-menu" id="nav-menu">
+
+<li><a href="#">About</a></li>
+
+<li class="dropdown">
+
+<a href="#" aria-haspopup="true">Services</a>
+
+<ul class="dropdown-menu">
+    <li><a href="#">Wound Care</a></li>
+    <li><a href="#">Pain Management</a></li>
 </ul>
+
+</li>
+
+<li class="dropdown">
+
+<a href="#" aria-haspopup="true">Supplements</a>
+
+<ul class="dropdown-menu">
+    <li><a href="#">Lozenges</a></li>
+    <li><a href="#">N.O. Beetz</a></li>
+    <li><a href="#">Serum</a></li>
+</ul>
+
+</li>
+
+<li><a href="#">Testimonials</a></li>
+<li><a href="#">Blog</a></li>
+<li><a href="#">Contact</a></li>
+
+</ul>
+
+</div>
+
 </nav>
 
 <a class="btn-primary">Schedule Appointment</a>
@@ -41,34 +79,26 @@
 <div class="slider">
 
 <div class="slide active">
-<img src="assets/img/slider/hero-1.jpg" loading="lazy">
-<div class="hero-text">
-<h1>Advanced Wound Care & Pain Management</h1>
-<p>Drug-free healing through AI-powered microcurrent therapy.</p>
-</div>
-</div>
-
-<div class="slide">
 <img src="assets/img/slider/hero-2.jpg" loading="lazy">
 <div class="hero-text">
-<h1>Accelerate Healing Naturally</h1>
-<p>Stimulating cellular repair and circulation.</p>
+<h1>Advanced Wound Care & Pain Management</h1>
+<p class="h3">Drug-free healing through AI-powered microcurrent therapy.</p>
 </div>
 </div>
 
 <div class="slide">
 <img src="assets/img/slider/hero-3.jpg" loading="lazy">
 <div class="hero-text">
-<h1>Personalized Treatment Plans</h1>
-<p>Technology-driven therapy designed for your recovery.</p>
+<h1>Accelerate Healing Naturally</h1>
+<p class="h3">Stimulating cellular repair and circulation.</p>
 </div>
 </div>
 
 <div class="slide">
 <img src="assets/img/slider/hero-4.jpg" loading="lazy">
 <div class="hero-text">
-<h1>Accelerate Healing Naturally</h1>
-<p>Stimulating cellular repair and circulation.</p>
+<h1>Personalized Treatment Plans</h1>
+<p class="h3">Technology-driven therapy designed for your recovery.</p>
 </div>
 </div>
 
@@ -78,7 +108,9 @@
 
 <section class="services container">
 
-<h2>What We Do</h2>
+<h2>Wound Care & Pain Management For Henderson, Summerlin, Las Vegas, NV & Beyond</h2>
+
+At Bio Cell Life, we specialize in unconventional healthcare solutions for wound care and pain management. Using cutting-edge AI technology and electrotherapeutic microcurrent, our AMT Certified Bio Cell Life technicians apply proprietary techniques to promote healing without drugs or invasive procedures. Our unique approach targets damaged tissues, stimulating blood flow while reducing pain, inflammation, and infection, helping restore overall health and accelerate recovery, allowing you to live a pain-free life. Whether you need relief from diabetic neuropathy, back pain, burns, migraines, or more, you can have peace of mind knowing you are in excellent hands. Contact us today to schedule an appointment. We proudly serve Henderson, Summerlin, Las Vegas, NV, and the surrounding areas.
 
 <div class="service-grid">
 
@@ -143,6 +175,7 @@ Mon - Fri 9am - 5pm
 
 <script src="assets/js/main.js"></script>
 <script src="assets/js/slider.js"></script>
+<script src="assets/js/menu.js"></script>
 
 </body>
 </html>
