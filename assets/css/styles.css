@@ -1,7 +1,9 @@
 :root{
 --primary:#1b66ff;
+--secondary:#242038;
+--tertiary:#35FF69;
 --dark:#111;
---light:#f5f7fa;
+--light:#F5F7FA;
 --white:#fff;
 }
 
@@ -12,24 +14,29 @@ box-sizing:border-box;
 }
 
 body{
-font-family: system-ui, sans-serif;
+font-family: "Inter", sans-serif;
+font-optical-sizing: auto;
+font-weight: 300;
+font-style: normal;
 line-height:1.6;
-color:#333;
-background:white;
+color:var(--dark);
+background:var(--white);
 }
 
 .container{
-width:90%;
+width:100%;
 max-width:1200px;
 margin:auto;
 }
 
 .header{
-background:white;
-border-bottom:1px solid #eee;
+background: rgba(255, 255, 255, 0.7);
+border-bottom:1px solid var(--light);
 position:sticky;
 top:0;
 z-index:1000;
+backdrop-filter: blur(18px);
+-webkit-backdrop-filter: blur(18px);
 }
 
 .nav{
@@ -41,91 +48,183 @@ padding:18px 0;
 
 nav ul{
 display:flex;
-gap: 0 28px;
+gap: 0;
 list-style:none;
 }
 
 nav a{
 text-decoration:none;
-color:#333;
-font-weight:600;
+color:var(--dark);
+font-weight:500;
+}
+
+.navbar{
+color:var(--dark);
+}
+
+.nav-container{
+max-width:1000px;
+margin:auto;
+padding:0 20px;
+display:flex;
+align-items:center;
+justify-content:space-between;
+height:64px;
 }
 
 h1{
-    font-size:10rem;
-    line-height: 9.25rem;
+    font-size:23vw;
+    font-weight:700;
+    line-height: 1cqb(1.2);
 }
 
 h2{
-    font-size:3rem;
-    line-height:3.3rem;
+    font-size:5rem;
+    line-height:5rem;
+    font-weight:700;
+    color:var(--secondary);
     padding: 50px 0 10px;
     text-align: center;
 }
 
-.h3{
-    font-size:1.6rem;
-    line-height:4rem;
+.h2-gradient{
+        background: linear-gradient(
+    to right in oklch, 
+    #1b66ff, 
+    #4f20ff);
+    background-clip: text;
+    color: transparent;
 }
 
+.h3{
+    font-size:1.5rem;
+    line-height:2.4rem;
+    color:var(--white);
+    text-align: center;
+}
+
+.h4{
+    font-size:1.6rem;
+    line-height:4rem;
+    font-weight: 300;
+}
+
+/* Schedule Appointment Button */
 .btn-primary{
 background:var(--primary);
-color:white;
-padding:10px 20px;
-border-radius:40px;
+color:var(--white);
+padding:10px 25px;
+border-radius:25px;
 font-weight:600;
-border: 2px solid;
+border: 1px solid;
 border-color: var(--primary);
-transition-duration: 0.35s;
+transition-duration: 0.25s;
 }
 
 .btn-primary:hover {
-  background-color: var(--white);
+  background: transparent;
   color: var(--primary);
-  border: 2px solid;
+  border: 1px solid;
   border-color: var(--primary);
   cursor: pointer;
 }
 
-.hero{
-height:75vh;
-overflow:hidden;
-position:relative;
+
+
+/* Learn More Button */
+.btn-learn{
+background:transparent;
+color:var(--light);
+padding:10px 40px;
+border-radius:25px;
+font-weight:600;
+border: 1px solid;
+border-color: var(--light);
+transition-duration: 0.25s;
 }
 
+.btn-learn:hover {
+  background: var(--primary);
+  color: var(--light);
+  border:1px solid;
+  border-color: var(--primary);
+  cursor: pointer;
+}
+
+
+/* Schedule Appointment Button */
+.btn-feature{
+background:var(--secondary);
+color:var(--white);
+padding:10px 40px;
+border-radius:25px;
+font-weight:600;
+border: 1px solid;
+border-color: var(--secondary);
+transition-duration: 0.25s;
+}
+
+.btn-feature:hover {
+  background: transparent;
+  color: var(--light);
+  border: 1px solid;
+  border-color: var(--light);
+  cursor: pointer;
+}
+
+
+.hero{
+  height:75vh;
+  overflow:hidden;
+  background:var(--primary);
+  position:relative;
+}
+
+/* actual text container */
+.hero-text-inner{
+  max-width:70%;
+}
+
+/* Text overlay */
+.hero-text{
+  position:absolute;
+  top:50%;
+  left:0;
+  transform:translateY(-50%);
+  width:100%;
+  padding:0 clamp(20px, 6vw, 120px);
+  color:var(--white);
+  text-align:left;
+}
+
+/* Responsive text */
+.hero-text h1{
+  font-size:clamp(12rem, 6vw, 64px);
+  line-height:1;
+}
+
+.hero-text p{
+  font-size:clamp(1rem, 2vw, 22px);
+  line-height: 1;
+}
+
+/* Slides */
 .slide{
-position:absolute;
-width:100%;
-height:100%;
-opacity:0;
-background:rgba(27, 102, 255, 1.0);
-transition:opacity 2.0s ease;
+  position:absolute;
+  width:100%;
+  height:100%;
+  opacity:0;
+  transition:opacity 2s ease;
 }
 
 .slide.active{
-opacity:1;
-filter: contrast(200%);
+  opacity:1;
 }
 
 .slide img{
-opacity:0.2;
-width:100%;
-height:100%;
-object-fit:cover;
-filter: grayscale(0%);
-}
-
-.hero-text{
-position:absolute;
-top:50%;
-left:50%;
-transform:translate(-50%,-50%);
-color:white;
-text-align:left;
-background:rgba(27, 102, 255, 0.0);
-padding: 30px;
-border-radius:0px;
-overflow: hidden;
+  width:100%;
+  height:100%;
+  object-fit:cover;
 }
 
 .service-grid{
@@ -148,36 +247,146 @@ transform:translateY(-8px);
 
 
 
+/* Read More Button Container */
+.services-sum{
+  margin-top: 0;
+  display: flex;
+  flex-direction: column;      /* stack items vertically */
+  align-items: center;         /* center horizontally */
+  text-align: center;          /* center text */
+  gap: 30px;                   /* space between text and button */
+  background: var(--secondary);
+
+  padding: clamp(60px, 8vw, 100px) clamp(30px, 6vw, 60px); /* responsive padding */
+  border-radius: 30px;
+}
+
+
+
+/* 3 Column Row */
+.services-features{
+display:grid;
+grid-template-columns:repeat(3,1fr);
+gap:30px;
+margin-top:60px;
+}
+
+.feature{
+  background-color: var(--light);
+  border-radius:30px;
+  text-align:center;
+  padding: 50px;
+  min-height: 30vh;
+
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+
+  position:relative;
+  overflow: hidden;
+}
+
+/* overlay layer */
+.feature::before{
+  content:"";
+  position:absolute;
+  inset:0;
+  background:var(--primary);
+  opacity:0;
+  transition:opacity .3s ease;
+}
+
+/* turn white on hover */
+.feature:hover::before{
+  opacity:0.9;
+}
+
+/* keep content above overlay */
+.feature > *{
+  position:relative;
+  z-index:1;
+}
+
+/* push button to bottom */
+.feature p{
+  margin-top:auto;
+}
+
+/* Different images */
+.feature.one{
+  background-image:url("/assets/img/feature/feature-1.jpeg");
+}
+
+.feature.two{
+  background-image:url("/assets/img/feature/feature-2.jpeg");
+}
+
+.feature.three{
+  background-image:url("/assets/img/feature/feature-3.jpeg");
+}
+
+
+.scroll-image{
+max-width: fit-content;
+background: #eaf3ff;
+border-radius:30px;
+object-fit: contain;
+}
+
+
+
+/* NAV LINKS */
+.nav-menu{
+display:flex;
+gap:4px;
+list-style:none;
+margin:0;
+padding:0;
+}
+
+.nav-menu a{
+color:var(--dark);
+text-decoration:none;
+padding:10px 16px;
+border-radius:8px;
+display:flex;
+align-items:center;
+gap:6px;
+}
+
+.nav-menu a:hover,
+.nav-menu a:focus{
+background:var(--light);
+outline:none;
+}
+
+
 
 /* DROPDOWN */
-
 .dropdown{
 position:relative;
 padding-bottom:4px;
 }
 
-/* submenu */
-
+/* Submenu */
 .dropdown-menu{
 position:absolute;
 top:100%;
 left:0;
-
 display:flex;
 flex-direction:column;
-
 min-width:200px;
-
-background:white;
-color:#111;
-
+background:var(--white);
+color:var(--dark);
 padding:6px 0;
-
 border-radius:8px;
 box-shadow:0 10px 25px rgba(0,0,0,0.15);
 
-/* animation */
-
+/* Submenu Animation */
 opacity:0;
 transform:translateY(4px);
 pointer-events:none;
@@ -185,8 +394,7 @@ pointer-events:none;
 transition:opacity .2s ease, transform .2s ease;
 }
 
-/* submenu items */
-
+/* Submenu Items */
 .dropdown-menu li{
 margin:0;
 padding:0;
@@ -204,11 +412,80 @@ white-space:nowrap;
 background:#f3f4f6;
 }
 
-/* show dropdown */
-
+/* Show Dropdown */
 .dropdown:hover .dropdown-menu,
 .dropdown:focus-within .dropdown-menu{
 opacity:1;
 transform:translateY(0);
 pointer-events:auto;
+}
+
+/* HAMBURGER */
+.hamburger{
+display:none;
+gap: 4px;
+cursor:pointer;
+}
+
+.bar{
+width: 100%;
+height:10px;
+background:hidden;
+transition:.3s;
+}
+
+/* Responsive Styles */
+.apple-scroll{
+padding:120px 0;
+}
+
+.scroll-wrapper{
+display:grid;
+grid-template-columns:1fr 1fr;
+max-width:1200px;
+margin:auto;
+gap:80px;
+align-items:start;
+}
+
+.scroll-image{
+position:sticky;
+top:120px;
+}
+
+.scroll-image img{
+width:100%;
+height:100%;
+object-fit:cover;
+}
+
+.scroll-steps{
+display:flex;
+flex-direction:column;
+gap:140px;
+}
+
+.step{
+max-width:500px;
+opacity:0;
+transform:translateY(40px);
+transition:all 0.8s ease;
+}
+
+.step.visible{
+opacity:1;
+transform:translateY(0);
+}
+
+.step h2{
+font-size:2.3rem;
+line-height: 1;
+margin-bottom:20px;
+text-align: left;
+}
+
+.step p{
+font-size:1.15rem;
+line-height:1.8;
+margin-bottom:30px;
 }
