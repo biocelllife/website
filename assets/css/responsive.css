@@ -90,8 +90,17 @@ padding: 20px;
   max-width:90%;
 }
 
+
+.footer{
+grid-template-columns:1fr;
+gap:30px;
+text-align:center;
 }
 
+}
+
+
+/* ------------------ MAX WIDTH 768px ------------------------------- */
 @media(max-width:768px){
 
 .nav{
