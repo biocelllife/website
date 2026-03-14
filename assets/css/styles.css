@@ -95,9 +95,18 @@ h2{
 
 .h2-gradient{
         background: linear-gradient(
-    to right in oklch, 
+    to bottom in oklch, 
     #1B66FF, 
     #6d24fe);
+    background-clip: text;
+    color: transparent;
+}
+
+.h2-grad-services{
+        background: linear-gradient(
+    to right in oklch, 
+    #ea66fc, 
+    #ff3946);
     background-clip: text;
     color: transparent;
 }
@@ -105,7 +114,7 @@ h2{
 .h3{
     font-size:1.5rem;
     line-height:2.4rem;
-    color:var(--white);
+    color:var(--dark);
     text-align: center;
 }
 
@@ -147,18 +156,18 @@ transition-duration: 0.25s;
 /* Learn More Button */
 .btn-learn{
 background:transparent;
-color:var(--light);
+color:var(--primary);
 padding:10px 40px;
 border-radius:25px;
 font-weight:600;
 border: 1px solid;
-border-color: var(--light);
+border-color: var(--primary);
 transition-duration: 0.25s;
 }
 
 .btn-learn:hover {
   background: var(--primary);
-  color: var(--light);
+  color: var(--white);
   border:1px solid;
   border-color: var(--primary);
   cursor: pointer;
@@ -305,7 +314,7 @@ white-space:nowrap;
   text-align:center;
   gap:30px;
 
-  background:var(--secondary);
+  background:var(--light);
   padding:clamp(60px,8vw,100px) 0;
 }
 
@@ -571,4 +580,16 @@ footer{
 .footer p{
   font-size:1rem;
   line-height:1.6;
+}
+
+.footer a{
+  color: var(--white);
+  text-decoration:none;
+  font-weight: 700;
+  font-size: small;
+}
+
+.footer a:hover{
+  color: var(--primary);
+  text-decoration:none;
 }
