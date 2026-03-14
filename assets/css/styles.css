@@ -175,6 +175,10 @@ font-weight:600;
 border: 1px solid;
 border-color: var(--secondary);
 transition-duration: 0.25s;
+
+display:inline-block;
+width:auto;
+white-space:nowrap;
 }
 
 .btn-feature:hover {
@@ -474,16 +478,19 @@ pointer-events:auto;
 
 /* HAMBURGER */
 .hamburger{
-display:none;
-gap: 4px;
-cursor:pointer;
+  display:none;
+  flex-direction:column;
+  justify-content:center;
+  gap:5px;
+  padding:10px 14px;
 }
 
 .bar{
-width: 100%;
-height:10px;
-background:hidden;
-transition:.3s;
+  width:24px;
+  height:2px;
+  background:var(--white);
+  transition:.3s;
+  border-radius:2px;
 }
 
 /* Responsive Styles */

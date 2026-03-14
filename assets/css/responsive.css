@@ -29,6 +29,18 @@ h2{
     font-weight: 300;
 }
 
+/* Keep logo + hamburger on same row */
+.nav{
+  flex-direction:row;
+  align-items:center;
+  justify-content:space-between;
+  flex-wrap:wrap;
+}
+
+.navbar{
+  width:auto;
+}
+
 .nav-container{
 height:auto;
 flex-wrap:wrap;
@@ -38,7 +50,7 @@ padding:12px 20px;
 .nav-menu{
 flex-direction:column;
 width:100%;
-max-height:0;
+order:3;
 overflow:hidden;
 transition:max-height .35s ease;
 }
@@ -90,6 +102,16 @@ padding: 20px;
   max-width:90%;
 }
 
+/* Stack feature cards on mobile */
+.services-features{
+  grid-template-columns:1fr;
+  gap:20px;
+}
+
+.feature{
+  min-height:220px;
+  padding:40px 20px;
+}
 
 .footer{
 grid-template-columns:1fr;
@@ -103,9 +125,16 @@ text-align:center;
 /* ------------------ MAX WIDTH 768px ------------------------------- */
 @media(max-width:768px){
 
+/* Keep logo + hamburger on same row */
 .nav{
-flex-direction:column;
-gap:15px;
+  flex-direction:row;
+  align-items:center;
+  justify-content:space-between;
+  flex-wrap:wrap;
+}
+
+.navbar{
+  width:auto;
 }
 
 .hero{
@@ -158,14 +187,16 @@ padding:12px 20px;
 }
 
 .hamburger{
-display:flex;
-background: #242038;
-border-radius: 20px;
+  display:flex;
+  background:#242038;
+  border-radius:20px;
+  padding:10px 14px;
 }
 
 .nav-menu{
 flex-direction:column;
 width:100%;
+order:3;
 max-height:0;
 overflow:hidden;
 transition:max-height .35s ease;
