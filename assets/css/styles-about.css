@@ -1,0 +1,76 @@
+:root{
+--primary:#1B66FF;
+--secondary:#242038;
+--tertiary:#25ECA0;
+--dark:#111;
+--light:#F5F7FA;
+--white:#fff;
+}
+
+.about-team {
+  padding: 60px 20px;
+}
+
+.team-container {
+  max-width: 1200px;
+  margin: 0 auto;
+
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 30px;
+}
+
+.employee-card {
+  display: flex;
+  align-items: center;
+  gap: 0;
+  background: var(--light);
+  border-radius: 40px;
+  overflow: hidden; /* keeps image flush with rounded corners */
+}
+
+.employee-card img {
+  width: 40%;
+  height: 350px;
+  object-fit: cover;
+  display: block;
+}
+
+/* Padding only on text */
+.employee-info {
+  padding: 20px;
+}
+
+.employee-info h3 {
+  margin: 0;
+  font-size: 18px;
+}
+
+.employee-info p {
+  margin: 5px 0 0;
+  color: #666;
+  font-size: 14px;
+}
+
+/* Mobile layout */
+@media (max-width: 768px) {
+
+  .team-container {
+    grid-template-columns: 1fr;
+  }
+
+  .ceo {
+    grid-column: span 1;
+  }
+
+  .employee-card {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .employee-card img {
+    width: 100%;
+    height: auto;
+  }
+
+}
