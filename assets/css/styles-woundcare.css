@@ -38,6 +38,18 @@
   padding: 140px 0;
 }
 
+.apple-story .panel:nth-child(1) {
+  background: url('../img/wound-1.jpg') center/cover no-repeat;
+}
+
+.apple-story .panel:nth-child(2) {
+  background: url('../img/wound-2.jpg') center/cover no-repeat;
+}
+
+.apple-story .panel:nth-child(3) {
+  background: url('../img/wound-3.jpg') center/cover no-repeat;
+}
+
 .feature-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -45,18 +57,66 @@
   align-items: center;
 }
 
-.pulse {
-  width: 200px;
-  height: 200px;
-  border-radius: 50%;
-  background: var(--primary);
-  margin: auto;
-  animation: pulse 2s infinite;
+.feature-visual {
+  position: relative;
 }
 
-@keyframes pulse {
-  0% { transform: scale(1); opacity: 1; }
+/* core energy */
+.pulse {
+  position: relative;
+  width: 220px;
+  height: 220px;
+  margin: auto;
+}
+
+.pulse::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 50%;
+  background: radial-gradient(circle, var(--primary), transparent 70%);
+  animation: corePulse 1.5s infinite ease-in-out;
+}
+
+/* outer rings */
+.pulse::after {
+  content: "";
+  position: absolute;
+  inset: -40px;
+  border-radius: 50%;
+  border: 2px solid var(--primary);
+  animation: wave 2s infinite;
+}
+
+/* electrical lines */
+.feature-visual::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: repeating-linear-gradient(
+    90deg,
+    transparent,
+    transparent 20px,
+    rgba(0,255,255,0.15) 22px
+  );
+  animation: flow 2s linear infinite;
+  opacity: 0.4;
+}
+
+/* animations */
+@keyframes corePulse {
+  0%,100% { transform: scale(1); opacity: 1; }
+  50% { transform: scale(1.1); opacity: 0.6; }
+}
+
+@keyframes wave {
+  0% { transform: scale(0.6); opacity: 0.8; }
   100% { transform: scale(1.6); opacity: 0; }
+}
+
+@keyframes flow {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(40px); }
 }
 
 /* Compare */
@@ -92,80 +152,75 @@
 
 /* ================= END OF APPLE STYLE ADDITIONS ================= */
 
-.scroll-sync {
-  height: 300vh;
-}
+    .sync-scroll {
+      height: 400vh; /* more room for snapping */
+      position: relative;
+    }
 
-.sync-wrapper {
-  position: sticky;
-  top: 0;
-  height: 100vh;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  align-items: center;
-}
+    .sticky {
+      position: sticky;
+      top: 0;
+      height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 5vw;
+      gap: 40px;
+    }
 
-.sync-text {
-  padding: 0 60px;
-}
+    .text-list {
+      display: flex;
+      flex-direction: column;
+      gap: 30px;
+      font-size: clamp(1.5rem, 2.5vw, 3rem);
+      z-index: 2;
+    }
 
-.sync-step {
-  font-size: 2.5rem;
-  margin-bottom: 20px;
-  opacity: 0.2;
-  transition: all 0.5s ease;
-}
+    .text-item {
+      opacity: 0.2;
+      filter: blur(6px);
+      transform: translateY(20px);
+      transition: all 0.5s ease;
+    }
 
-.sync-step.active {
-  opacity: 1;
-  transform: translateX(10px);
-}
+    .text-item.active {
+      opacity: 1;
+      filter: blur(0px);
+      transform: translateY(0);
+    }
 
-.sync-image {
-  position: relative;
-  height: 500px;
-}
+    .image-container {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 70vw;
+      height: 100%;
+      z-index: 1;
+      overflow: hidden;
+    }
 
-.sync-image img {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  border-radius: 20px;
-  opacity: 0;
-  transition: opacity 0.6s ease;
-}
+    .image-container img {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      object-fit: cover; /* perfect for 2560x1000 */
+      opacity: 0;
+      transition: opacity 0.8s ease;
+    }
 
-.sync-image img.active {
-  opacity: 1;
-}
+    .image-container img.active {
+      opacity: 1;
+    }
 
-/* Compare Slider */
-.compare-slider {
-  position: relative;
-  overflow: hidden;
-  border-radius: 20px;
-}
+    /* Mobile */
+    @media (max-width: 768px) {
+      .sticky {
+        flex-direction: column;
+        justify-content: center;
+      }
 
-.compare-slider img {
-  width: 100%;
-  display: block;
-}
-
-.compare-slider .after {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 50%;
-  overflow: hidden;
-}
-
-.handle {
-  position: absolute;
-  top: 0;
-  left: 50%;
-  width: 4px;
-  height: 100%;
-  background: white;
-  cursor: ew-resize;
-}
+      .text-list {
+        align-items: center;
+        text-align: center;
+      }
+    }

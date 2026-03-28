@@ -7,6 +7,36 @@
 --white:#fff;
 }
 
+/* About Section */
+.about-section {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* two equal columns */
+    gap: 40px; /* space between columns */
+    align-items: start;
+    margin: 60px 0;
+}
+
+/* Oversized Title with Gradient */
+.about-title h1 {
+    font-size: 5rem;
+    line-height: 1.1;
+    margin: 0;
+
+    /* Gradient text */
+    background: linear-gradient(90deg, #1B66FF 0%, #8fb4ff 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+
+    /* Optional: fallback color for non-webkit browsers */
+    color: #4facfe;
+}
+
+/* Content Paragraphs */
+.about-content p {
+    margin-bottom: 1.5em;
+    line-height: 1.6;
+}
+
 .about-team {
   padding: 60px 20px;
 }
