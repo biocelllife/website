@@ -280,4 +280,5 @@ transition-duration: 0.25s;
   border:1px solid;
   border-color: var(--primary);
   cursor: pointer;
+  text-decoration: none;
 }
