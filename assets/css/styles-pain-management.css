@@ -196,6 +196,7 @@ section{
     font-size:1.18rem;
     color:var(--muted);
     line-height:1.8;
+    text-align:center;
 }
 
 /* FEATURES */
