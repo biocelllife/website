@@ -145,8 +145,8 @@ transition-duration: 0.25s;
     left:0;
     right:0;
     height:220px;
-    background:var(--gradient);
-    background-image:url("https://www.biocelllife.com/assets/img/feature/feature-1.jpeg");
+    background:
+        url("https://www.biocelllife.com/assets/img/feature/feature-1.jpeg");
     background-size:cover;
     background-position:center;
 }
@@ -269,8 +269,8 @@ section{
 /* FULL WIDTH */
 
 .full-banner{
-    background:var(--gradient);
-    background-image:url("https://www.biocelllife.com/assets/img/slider/hero-4.jpg");
+    background:
+        url("https://www.biocelllife.com/assets/img/slider/hero-4.jpg");
     background-size:cover;
     background-position:center;
     color:white;
