@@ -58,7 +58,7 @@ h1{
 }
 
 .eyebrow{
-    color:var(--accent);
+    color:var(--text);
     font-weight:600;
     margin-bottom:20px;
     text-transform:uppercase;
@@ -146,6 +146,9 @@ transition-duration: 0.25s;
     right:0;
     height:220px;
     background:var(--gradient);
+    background-image:url("/assets/img/feature/feature-1.jpeg");
+    background-size:cover;
+    background-position:center;
 }
 
 .device-content{
@@ -266,6 +269,9 @@ section{
 
 .full-banner{
     background:var(--gradient);
+    background-image:url("/assets/img/slider/hero-4.jpg");
+    background-size:cover;
+    background-position:center;
     color:white;
     border-radius:48px;
     padding:90px;
@@ -276,13 +282,12 @@ section{
 .full-banner h2{
     font-size:clamp(3rem,6vw,5rem);
     line-height:1;
-    max-width:900px;
     margin-bottom:30px;
     color: var(--white);
 }
 
 .full-banner p{
-    max-width:700px;
+    max-width:1200px;
     font-size:1.2rem;
     line-height:1.8;
     opacity:.88;
