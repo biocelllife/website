@@ -85,11 +85,11 @@ h1{
 }
 
 h2{
-    font-size:5rem;
-    line-height:5rem;
+    font-size:6rem;
+    line-height:5.15rem;
     font-weight:700;
     color:var(--secondary);
-    padding: 50px 0 10px;
+    padding: 90px 0 40px;
     text-align: center;
 }
 
@@ -97,7 +97,7 @@ h2{
     background: linear-gradient(
     to bottom in oklch, 
     #1B66FF, 
-    #6d24fe);
+    #ff5ac0);
     background-clip: text;
     color: transparent;
 }
@@ -105,8 +105,8 @@ h2{
 .h2-grad-services{
     background: linear-gradient(
     to right in oklch, 
-    #ea66fc, 
-    #ff3946);
+    #ef77a9, 
+    #ff6f67);
     background-clip: text;
     color: transparent;
 }
@@ -129,6 +129,15 @@ h2{
     line-height:1.2;
     color:var(--dark);
     text-align:left;
+}
+
+.h3-subheading{
+    font-size:1.5rem;
+    line-height:1.2;
+    font-weight: 300;
+    color: rgba(0,0,0,0.5);
+    text-align:center;
+    letter-spacing: 0.125rem;
 }
 
 /* Schedule Appointment Button */
@@ -327,7 +336,7 @@ footer{
 
 /* actual text container */
 .hero-text-inner{
-  max-width:70%;
+  max-width:80%;
 }
 
 /* Text overlay */
