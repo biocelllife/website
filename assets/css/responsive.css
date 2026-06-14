@@ -119,6 +119,10 @@ gap:30px;
 text-align:center;
 }
 
+.footer-logo {
+  width: 200px;
+}
+
 }
 
 
@@ -239,5 +243,28 @@ padding:0;
 display:flex;
 gap:0;
 }
+
+.footer-container {
+  flex-direction: column;
+  text-align: center;
+  gap: 30px;
+}
+
+.footer-logo {
+  width: 160px;
+  margin: 0 auto 15px;
+}
+
+}
+
+/* Mobile optimization */
+@media (max-width: 480px) {
+  .footer-logo {
+    width: 120px;
+  }
+
+  .footer-col {
+    text-align: center;
+  }
 
 }
