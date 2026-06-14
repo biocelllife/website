@@ -1,8 +1,8 @@
 .h2-wc-ben{
     background: linear-gradient(
     to right in oklch, 
-    #4381ff, 
-    #1b66ff);
+    #ff755d, 
+    #ff4066);
     background-clip: text;
     color: transparent;
 }
@@ -10,8 +10,8 @@
 .h2-wc-th{
     background: linear-gradient(
     to right in oklch, 
-    #1b66ff, 
-    #5236d0);
+    #1b7aff, 
+    #1b66ff);
     background-clip: text;
     color: transparent;
 }
@@ -32,7 +32,7 @@
   content: "";
   position: absolute;
   inset: 0;
-  background: linear-gradient(180deg, rgba(8, 12, 20, 0.18), rgba(8, 12, 20, 0.7));
+  background: linear-gradient(180deg, rgba(8, 12, 20, 0.18), rgba(27, 102, 255, 0.75));
 }
 
 .apple-story .panel.light::before {
@@ -51,8 +51,8 @@
   border-radius: 36px;
   background: transparent;
   border: 1px solid rgba(255, 255, 255, 0.14);
-  backdrop-filter: blur(20px);
-  -webkit-backdrop-filter: blur(20px);
+  backdrop-filter: blur(30px);
+  -webkit-backdrop-filter: blur(30px);
 }
 
 .apple-story .panel.light .panel-inner {
@@ -65,10 +65,10 @@
 .panel-kicker {
   margin-bottom: 18px;
   font-size: 0.85rem;
-  font-weight: 700;
-  letter-spacing: 0.22em;
+  font-weight: 500;
+  letter-spacing: 0.45em;
   text-transform: uppercase;
-  color: rgba(255, 255, 255, 0.76);
+  color: var(--light);
 }
 
 .apple-story .panel.light .panel-kicker {
@@ -80,7 +80,7 @@
   line-height: 0.95;
   letter-spacing: -0.06em;
   margin-bottom: 24px;
-  color: var(--white);
+  color: var(--light);
 }
 
 .panel-title {
@@ -95,7 +95,7 @@
   margin: 0 auto;
   font-size: clamp(1.15rem, 2vw, 1.6rem);
   line-height: 1.6;
-  color: rgba(255, 255, 255, 0.8);
+  color: var(--light);
 }
 
 .apple-story .panel.light .panel-lead,
@@ -128,7 +128,7 @@
   display: block;
   margin-top: 6px;
   font-size: 0.92rem;
-  color: rgba(255, 255, 255, 0.72);
+  color: var(--light);
 }
 
 .panel-pill-row {
@@ -191,15 +191,15 @@
 }
 
 .apple-story .panel:nth-child(1) {
-  background: url('../img/wound-1.jpg') center/cover no-repeat;
+  background: url('../img/wound-care/hero-2.jpg') center/cover no-repeat;
 }
 
 .apple-story .panel:nth-child(2) {
-  background: url('../img/wound-2.jpg') center/cover no-repeat;
+  background: url('../img/wound-care/hero-1.jpg') center/cover no-repeat;
 }
 
 .apple-story .panel:nth-child(3) {
-  background: url('../img/wound-3.jpg') center/cover no-repeat;
+  background: url('../img/wound-care/hero-3.jpg') center/cover no-repeat;
 }
 
 .feature-grid {

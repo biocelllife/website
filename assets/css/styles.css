@@ -1,6 +1,6 @@
 :root{
---primary:#1B66FF;
---secondary:#242038;
+--primary:#1b66ff;
+--secondary:#001134;
 --tertiary:#25ECA0;
 --dark:#111;
 --light:#F5F7FA;
@@ -86,8 +86,8 @@ h1{
 
 h2{
     font-size:6rem;
-    line-height:5.15rem;
-    font-weight:700;
+    line-height:5.7rem;
+    font-weight:600;
     color:var(--secondary);
     padding: 90px 0 40px;
     text-align: center;
@@ -95,9 +95,9 @@ h2{
 
 .h2-gradient{
     background: linear-gradient(
-    to bottom in oklch, 
-    #1B66FF, 
-    #ff5ac0);
+    to right in oklch, 
+    #3fc2df, 
+    #1B66FF);
     background-clip: text;
     color: transparent;
 }
@@ -105,8 +105,8 @@ h2{
 .h2-grad-services{
     background: linear-gradient(
     to right in oklch, 
-    #ef77a9, 
-    #ff6f67);
+    #ff6660, 
+    #ff486f);
     background-clip: text;
     color: transparent;
 }
