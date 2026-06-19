@@ -18,9 +18,9 @@
 
 .eyebrow {
     color: var(--dark);
-    font-size: .85rem;
+    font-size: 1.1rem;
     font-weight: 700;
-    letter-spacing: .15em;
+    letter-spacing: .07em;
 }
 
 .contact-intro h1 {
@@ -44,15 +44,14 @@
 }
 
 .info-card {
-    background: rgba(255,255,255,.04);
-    border: 1px solid rgba(255,255,255,.08);
+    border: 1px solid rgba(0,0,0,.08);
     backdrop-filter: blur(12px);
     border-radius: 20px;
     padding: 22px 24px;
 }
 
 .info-card h3 {
-    color: var(--primary);
+    color: var(--dark);
     margin-bottom: 8px;
 }
 
@@ -62,7 +61,7 @@
 }
 
 .contact-form-wrapper {
-    background: rgba(255,255,255,.04);
+    background: var(--white);
     border: 1px solid rgba(0, 0, 0, 0.12);
     backdrop-filter: blur(18px);
     border-radius: 28px;
@@ -87,7 +86,7 @@
 }
 
 .field label {
-    color: white;
+    color: var(--dark);
     margin-bottom: 8px;
     font-weight: 600;
 }
@@ -96,10 +95,10 @@
 .field textarea,
 .field select {
     background: rgba(255,255,255,.05);
-    border: 1px solid rgba(255,255,255,.1);
+    border: 1px solid rgba(0,0,0,.1);
     border-radius: 14px;
     padding: 16px;
-    color: white;
+    color: var(--dark);
     font-size: 1rem;
     transition: .25s ease;
 }
@@ -108,28 +107,28 @@
 .field textarea:focus,
 .field select:focus {
     outline: none;
-    border-color: #31B6FF;
+    border-color: var(--primary);
     box-shadow: 0 0 0 3px rgba(49,182,255,.15);
 }
 
-.submit-btn {
-    margin-top: 10px;
-    border: none;
-    border-radius: 23px;
-    padding: 18px 24px;
-    background: linear-gradient(
-        135deg,
-        #31B6FF,
-        #1f8bff
-    );
-    color: white;
-    font-weight: 700;
-    cursor: pointer;
-    transition: .3s ease;
+/* Submit Button */
+.btn-submit{
+background:transparent;
+color:var(--primary);
+padding:10px 40px;
+border-radius:25px;
+font-weight:600;
+border: 1px solid;
+border-color: var(--primary);
+transition-duration: 0.25s;
 }
 
-.submit-btn:hover {
-    transform: translateY(-2px);
+.btn-submit:hover {
+  background: var(--primary);
+  color: var(--white);
+  border:1px solid;
+  border-color: var(--primary);
+  cursor: pointer;
 }
 
 .success-message {
