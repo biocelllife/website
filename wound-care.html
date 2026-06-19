@@ -26,74 +26,16 @@
 
 <body>
 
-<header class="header">
+<div id="header"></div>
 
-<div class="container nav">
+<script>
+fetch('/components/header.html')
+  .then(response => response.text())
+  .then(data => {
+    document.getElementById('header').innerHTML = data;
+  });
+</script>
 
-<div class="logo"><a href="https://biocelllife.com/"><img src="assets/img/logo/bio-cell-horiz.svg" alt="Bio Cell Life Logo" width="170px"></a></div>
-
-<nav class="navbar" role="navigation">
-
-<div class="nav-container">
-
-<div class="hamburger" id="hamburger" aria-label="Toggle Menu" aria-expanded="false">
-<div class="bar"></div>
-<div class="bar"></div>
-<div class="bar"></div>
-</div>
-
-<ul class="nav-menu" id="nav-menu">
-
-<li class="dropdown">
-
-<a href="#" aria-haspopup="true">Services</a>
-
-<ul class="dropdown-menu">
-    <li><a href="/wound-care.html">Wound Care</a></li>
-    <li><a href="/pain-management.html">Pain Management</a></li>
-</ul>
-
-</li>
-
-<li class="dropdown">
-
-<a href="#" aria-haspopup="true">Supplements</a>
-
-<ul class="dropdown-menu">
-    <li><a href="#">Lozenges</a></li>
-    <li><a href="#">N.O. Beetz</a></li>
-    <li><a href="#">Serum</a></li>
-</ul>
-
-</li>
-
-<li class="dropdown">
-
-<a href="#" aria-haspopup="true">Zinzino</a>
-
-<ul class="dropdown-menu">
-    <li><a href="https://www.zinzino.com/shop/site/US/en-US/products/premier-kits/balance-tests-kits/910465" target="_blank">Balance Test Kit</a></li>
-    <li><a href="https://www.zinzino.com/2021257490/us/en-us/" target="_blank">All Products</a></li>
-</ul>
-
-</li>
-
-<li><a href="/about.html">Our Story</a></li>
-<li><a href="/contact.html">Contact Us</a></li>
-
-</ul>
-
-</div>
-
-</nav>
-
-<a class="btn-primary">Schedule Appointment</a>
-
-</div>
-
-</header>
-
-<!-- APPLE STORY SCROLL -->
 <section class="apple-story">
 
   <div class="panel">
@@ -251,71 +193,15 @@
 
 </section>
 
-<footer class="site-footer">
+<div id="footer"></div>
 
-    <div class="footer-container">
-
-        <!-- COLUMN 1 -->
-        <div class="footer-column footer-company">
-
-            <img src="assets/img/logo/bio-cell-horiz-white.svg" alt="BioCell Life" class="footer-logo">
-
-            <address>
-                6655 W Sahara Ave, Suite B108<br>
-                Las Vegas, NV 89146<br>
-                (702) 867-8880
-            </address>
-
-            <a href="https://maps.apple.com/?q=6655+W+Sahara+Ave,+Las+Vegas,+NV+89146" onclick="if(!/iPhone|iPad|iPod/.test(navigator.userAgent)) {this.href='https://www.google.com/maps/search/?api=1&query=6655+W+Sahara+Ave,+Las+Vegas,+NV+89146';}" class="btn-directions" target="_blank">Get Directions
-            </a>
-
-        </div>
-
-        <!-- COLUMN 2 -->
-        <div class="footer-column footer-hours">
-
-            <h4>Office Hours</h4>
-
-            <div class="hours-row">
-                <span>Monday</span>
-                <span>8:00 AM - 5:00 PM</span>
-            </div>
-
-            <div class="hours-row">
-                <span>Tuesday</span>
-                <span>8:00 AM - 5:00 PM</span>
-            </div>
-
-            <div class="hours-row">
-                <span>Wednesday</span>
-                <span>8:00 AM - 5:00 PM</span>
-            </div>
-
-            <div class="hours-row">
-                <span>Thursday</span>
-                <span>8:00 AM - 5:00 PM</span>
-            </div>
-
-            <div class="hours-row">
-                <span>Friday</span>
-                <span>8:00 AM - 5:00 PM</span>
-            </div>
-
-            <div class="hours-row">
-                <span>Saturday</span>
-                <span>Closed</span>
-            </div>
-
-            <div class="hours-row">
-                <span>Sunday</span>
-                <span>Closed</span>
-            </div>
-
-        </div>
-
-    </div>
-
-</footer>
+<script>
+fetch('/components/footer.html')
+  .then(response => response.text())
+  .then(data => {
+    document.getElementById('footer').innerHTML = data;
+  });
+</script>
 
 <script src="assets/js/main.js"></script>
 <script src="assets/js/slider.js"></script>
