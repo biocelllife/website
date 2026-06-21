@@ -596,6 +596,7 @@ color:var(--primary);
 padding:10px 40px;
 border-radius:25px;
 font-weight:600;
+text-decoration:none;
 border: 1px solid;
 border-color: var(--primary);
 transition-duration: 0.25s;

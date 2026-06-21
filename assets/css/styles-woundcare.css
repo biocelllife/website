@@ -10,8 +10,8 @@
 .h2-wc-th{
     background: linear-gradient(
     to right in oklch, 
-    #1b7aff, 
-    #1b66ff);
+    #000000, 
+    #000000);
     background-clip: text;
     color: transparent;
 }
