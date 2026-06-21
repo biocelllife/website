@@ -98,7 +98,7 @@ padding: 20px;
 
 /* actual text container */
 .hero-text-inner{
-  max-width:90%;
+  max-width:1400px;
 }
 
 /* Stack feature cards on mobile */
@@ -159,7 +159,8 @@ text-align:center;
 }
 
 .hero{
-height:35vh;
+height:58vh;
+min-height:460px;
 }
 
 .service-grid{
@@ -168,6 +169,8 @@ grid-template-columns:1fr;
 
 .hero-text{
 text-align:left;
+top:45%;
+padding:20px;
 }
 
 h1{
@@ -197,8 +200,16 @@ h2{
 
 /* Responsive text */
 .hero-text h1{
-  font-size:clamp(3rem, 6vw, 36px);
-  line-height:1;
+  width:100%;
+  max-width:none;
+  margin-bottom:16px;
+  font-size:clamp(3rem, 14vw, 5.4rem);
+  line-height:.92;
+}
+
+.hero-text p{
+  max-width:100%;
+  line-height:1.45;
 }
 
 .nav-container{

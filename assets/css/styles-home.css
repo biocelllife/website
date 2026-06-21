@@ -5,6 +5,12 @@
   position:relative;
 }
 
+.slider{
+  position:relative;
+  width:100%;
+  height:100%;
+}
+
 .hero-single{
   height:50vh;
   overflow:hidden;
@@ -14,7 +20,9 @@
 
 /* actual text container */
 .hero-text-inner{
-  max-width:70%;
+  width:100%;
+  max-width:1400px;
+  margin:0 auto;
 }
 
 /* Text overlay */
@@ -27,36 +35,65 @@
   padding:0 clamp(20px, 6vw, 120px);
   color:var(--white);
   text-align:left;
+  z-index:2;
 }
 
 /* Responsive text */
 .hero-text h1{
-  font-size:clamp(12rem, 6vw, 64px);
-  line-height:1;
+  max-width:1400px;
+  margin:0 0 clamp(18px, 2vw, 34px);
+  font-size:clamp(5.4rem, 9.4vw, 9.25rem);
+  line-height:.9;
 }
 
 .hero-text p{
+  max-width:780px;
   font-size:clamp(1rem, 2vw, 22px);
-  line-height: 1;
+  line-height:1.35;
 }
 
 /* Slides */
 .slide{
   position:absolute;
+  inset:0;
   width:100%;
   height:100%;
   opacity:0;
-  transition:opacity 2s ease;
+  pointer-events:none;
+  z-index:0;
+  transition:opacity 1.4s ease-in-out;
 }
 
 .slide.active{
   opacity:1;
+  pointer-events:auto;
+  z-index:2;
+}
+
+.slide.leaving{
+  opacity:0;
+  z-index:1;
 }
 
 .slide img{
   width:100%;
   height:100%;
   object-fit:cover;
+  transform:scale(1);
+}
+
+.slide.active img{
+  animation:heroImageZoom 6.8s ease-out forwards;
+}
+
+@keyframes heroImageZoom{
+  from{
+    transform:scale(1);
+  }
+
+  to{
+    transform:scale(1.07);
+  }
 }
 
 .service-grid{
@@ -281,4 +318,12 @@ transition-duration: 0.25s;
   border-color: var(--primary);
   cursor: pointer;
   text-decoration: none;
+}
+
+@media (prefers-reduced-motion: reduce){
+  .slide,
+  .slide.active img{
+    animation:none;
+    transition:none;
+  }
 }

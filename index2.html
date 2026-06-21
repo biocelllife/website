@@ -36,12 +36,12 @@ fetch('/components/header.html')
   });
 </script>
 
-<section class="hero">
+<section class="hero" aria-label="Featured treatments">
 
-<div class="slider">
+<div class="slider" data-slider>
 
-<div class="slide active">
-    <img src="assets/img/slider/hero-2.jpg" loading="lazy">
+<div class="slide active" id="hero-slide-1" data-slide>
+    <img src="assets/img/slider/hero-2.jpg" alt="Bio Cell Life therapy room prepared for wound care and pain management treatment" loading="eager" fetchpriority="high">
     <div class="hero-text">
         <div class="hero-text-inner">
             <h1>Wound Care & Pain Management</h1>
@@ -50,8 +50,8 @@ fetch('/components/header.html')
     </div>
 </div>
 
-<div class="slide">
-    <img src="assets/img/slider/hero-3.jpg" loading="lazy">
+<div class="slide" id="hero-slide-2" data-slide>
+    <img src="assets/img/slider/hero-3.jpg" alt="Patient-focused microcurrent therapy equipment for natural healing support" loading="lazy">
     <div class="hero-text">
         <div class="hero-text-inner">
             <h1>Accelerate Healing Naturally</h1>
@@ -60,8 +60,8 @@ fetch('/components/header.html')
     </div>
 </div>
 
-<div class="slide">
-    <img src="assets/img/slider/hero-4.jpg" loading="lazy">
+<div class="slide" id="hero-slide-3" data-slide>
+    <img src="assets/img/slider/hero-4.jpg" alt="Personalized Bio Cell Life treatment setting for recovery planning" loading="lazy">
     <div class="hero-text">
         <div class="hero-text-inner">
             <h1>Personalized Treatment Plans</h1>
