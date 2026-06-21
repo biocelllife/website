@@ -158,10 +158,13 @@ transition-duration: 0.25s;
 
 .error-message {
     color: #d93025;
-    font-size: 12px;
+    font-size: 14px;
     margin-top: 4px;
+    min-height: 20px; /* Prevents layout shifting when error appears */
 }
 
-input:invalid {
+/* Red border only appears if the field is invalid AND the user interacted with it */
+input:invalid:not(:placeholder-shown) {
     border-color: #d93025;
+    background-color: #fff8f8;
 }

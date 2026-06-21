@@ -39,48 +39,61 @@ form.addEventListener('submit', async (e) => {
 
 const phoneInput = document.getElementById('phone');
 const phoneError = document.getElementById('phone-error');
+const form = document.getElementById('myForm');
 
-// Auto-format while typing
+// 1. Strict Typing Filter & Real-Time Auto-Formatting
 phoneInput.addEventListener('input', function (e) {
-    // Strip everything except numbers
+    // Strip everything except raw digits
     let digits = e.target.value.replace(/\D/g, '');
-
-    // Limit to 10 digits
+    
+    // Cap it strictly at 10 digits
     digits = digits.substring(0, 10);
 
+    // Build the formatted string step-by-step as they type
     let formatted = '';
-
-    if (digits.length > 0) {
-        formatted = '(' + digits.substring(0, 3);
-    }
-
-    if (digits.length >= 3) {
-        formatted = '(' + digits.substring(0, 3) + ')';
-    }
-
-    if (digits.length > 3) {
-        formatted += ' ' + digits.substring(3, 6);
-    }
-
-    if (digits.length > 6) {
-        formatted += '-' + digits.substring(6, 10);
+    if (digits.length === 0) {
+        formatted = '';
+    } else if (digits.length <= 3) {
+        formatted = `(${digits}`;
+    } else if (digits.length <= 6) {
+        formatted = `(${digits.substring(0, 3)}) ${digits.substring(3)}`;
+    } else {
+        formatted = `(${digits.substring(0, 3)}) ${digits.substring(3, 6)}-${digits.substring(6)}`;
     }
 
     e.target.value = formatted;
+
+    // Real-time error clearing: If they type a valid 10-digit number, clear errors instantly
+    if (digits.length === 10) {
+        phoneError.textContent = '';
+        phoneInput.setCustomValidity('');
+    }
 });
 
-// Validate when leaving field
-phoneInput.addEventListener('blur', function () {
-    const digits = this.value.replace(/\D/g, '');
+// 2. Format Validation Check (When leaving the field or submitting)
+function validatePhoneNumber() {
+    const digits = phoneInput.value.replace(/\D/g, '');
 
     if (digits.length === 0) {
         phoneError.textContent = 'Phone number is required.';
-        this.setCustomValidity('Phone number is required.');
+        phoneInput.setCustomValidity('Required.');
     } else if (digits.length !== 10) {
         phoneError.textContent = 'Please enter a valid 10-digit phone number.';
-        this.setCustomValidity('Invalid phone number.');
+        phoneInput.setCustomValidity('Invalid.');
     } else {
         phoneError.textContent = '';
-        this.setCustomValidity('');
+        phoneInput.setCustomValidity('');
+    }
+}
+
+// Run validation when user finishes typing and clicks away
+phoneInput.addEventListener('blur', validatePhoneNumber);
+
+// 3. Final Form Submission Safeguard
+form.addEventListener('submit', function (e) {
+    validatePhoneNumber(); // Force final check
+
+    if (!form.checkValidity()) {
+        e.preventDefault(); // Stop form submission if invalid
     }
 });

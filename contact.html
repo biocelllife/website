@@ -89,7 +89,7 @@ fetch('/components/header.html')
 
                     <div class="field">
                         <label>Phone Number</label>
-                        <input type="tel" name="phone" maxlength="14" inputmode="numeric" placeholder="(123) 456-7890" required>
+                        <input type="tel" name="phone" id="phone" maxlength="14" inputmode="numeric" autocomplete="tel" placeholder="(123) 456-7890" required>
                         <span id="phone-error" class="error"></span>
                     </div>
                 </div>
@@ -97,11 +97,11 @@ fetch('/components/header.html')
                 <div class="field">
                     <label>How can we help?</label>
                     <select name="service" required>
-                        <option>Select an option</option>
-                        <option>Wound Care</option>
-                        <option>Pain Management</option>
-                        <option>General Questions</option>
-                        <option>Schedule Consultation</option>
+                        <option value="">Select an option</option>
+                        <option value="Wound Care">Wound Care</option>
+                        <option value="Pain Management">Pain Management</option>
+                        <option value="General Questions">General Questions</option>
+                        <option value="Schedule Consultation">Schedule Consultation</option>
                     </select>
                 </div>
 
