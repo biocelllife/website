@@ -77,19 +77,20 @@ fetch('/components/header.html')
 
                     <div class="field">
                         <label>Last Name</label>
-                        <input type="text" name="lastName" required>
+                        <input type="text" name="lastName" placeholder="Required" required>
                     </div>
                 </div>
 
                 <div class="form-row">
                     <div class="field">
                         <label>Email Address</label>
-                        <input type="email" name="email" required>
+                        <input type="email" name="email" placeholder="email@domain.com" required>
                     </div>
 
                     <div class="field">
                         <label>Phone Number</label>
-                        <input type="tel" name="phone">
+                        <input type="tel" name="phone" maxlength="14" inputmode="numeric" placeholder="(123) 456-7890" required>
+                        <span id="phone-error" class="error"></span>
                     </div>
                 </div>
 
