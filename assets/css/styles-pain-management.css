@@ -252,6 +252,14 @@ section{
     overflow:hidden;
 }
 
+.conditions-center{
+    position:relative;
+    z-index:2;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+
 .conditions-showcase{
     position:relative;
     min-height:850px;

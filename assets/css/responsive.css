@@ -29,6 +29,28 @@ h2{
     font-weight: 300;
 }
 
+@media (max-width: 991px){
+
+    .conditions-showcase{
+        min-height:auto;
+        display:flex;
+        flex-direction:column;
+        gap:20px;
+    }
+
+    .center-card{
+        width:100%;
+        padding:40px;
+        order:1;
+    }
+
+    .condition-chip{
+        position:static;
+        width:fit-content;
+    }
+
+}
+
 /* Keep logo + hamburger on same row */
 .nav{
   flex-direction:row;
