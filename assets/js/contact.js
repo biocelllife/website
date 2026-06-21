@@ -1,3 +1,5 @@
+alert("JS File is connected successfully!");
+
 // Use a single, matching form ID ('form')
 const form = document.getElementById('form');
 const submitBtn = form.querySelector('button[type="submit"]');
