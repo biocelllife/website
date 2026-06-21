@@ -207,11 +207,13 @@ section{
 }
 
 .feature-card{
-    background:var(--card);
-    border:1px solid var(--line);
+    background: rgba(255,255,255,0.15);
+    border:1px solid rgba(255,255,255,0.8);
     border-radius:36px;
     padding:48px;
     transition:.4s;
+    backdrop-filter: blur(30px);
+    -webkit-backdrop-filter: blur(30px);
 }
 
 .feature-card:hover{
@@ -222,7 +224,7 @@ section{
 .feature-number{
     font-size:4rem;
     font-weight:700;
-    color:#dbeafe;
+    color: var(--accent);
     margin-bottom:20px;
 }
 
@@ -236,6 +238,11 @@ section{
     line-height:1.8;
 }
 
+.features-container{
+    /*background: url('../img/pain-management/hero-2.jpg') center/cover no-repeat; */
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0.8) 0%, rgba(255, 255, 255, 0.8) 100%), url('../img/pain-management/hero-2.jpg') center/cover no-repeat;
+}
+
 /* CONDITIONS */
 
 .conditions{
@@ -245,17 +252,17 @@ section{
 }
 
 .condition{
-    background:white;
+    background:var(--white);
     border-radius:24px;
     padding:32px;
     border:1px solid var(--line);
     text-align:center;
-    transition:.3s;
+    transition:.15s;
 }
 
 .condition:hover{
-    background:#111;
-    color:white;
+    background:var(--line);
+    color:var(--dark);
 }
 
 .condition span{

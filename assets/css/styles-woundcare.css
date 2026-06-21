@@ -409,10 +409,17 @@
         grid-template-columns: 1fr;
       }
 
+      .sync-scroll {
+        height: auto;
+      }
+
       .sticky {
+        position: relative;
+        top: auto;
+        height: auto;
         grid-template-columns: 1fr;
         justify-content: center;
-        padding: 40px 6vw;
+        padding: 64px 6vw 80px;
       }
 
       .text-list {
@@ -421,7 +428,13 @@
         max-width: none;
       }
 
+      .text-item {
+        opacity: 1;
+        filter: none;
+        transform: none;
+      }
+
       .image-container {
-        height: 52vh;
+        height: min(56vw, 320px);
       }
     }
