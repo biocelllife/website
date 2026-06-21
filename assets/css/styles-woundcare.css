@@ -1,8 +1,8 @@
 .h2-wc-ben{
     background: linear-gradient(
     to right in oklch, 
-    #ff755d, 
-    #ff4066);
+    #1B66FF,
+    #8FB4FF);
     background-clip: text;
     color: transparent;
 }

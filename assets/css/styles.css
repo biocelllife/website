@@ -108,8 +108,8 @@ h2{
 .h2-gradient{
     background: linear-gradient(
     to right in oklch, 
-    #3fc2df, 
-    #1B66FF);
+    #1B66FF, 
+    #8FB4FF);
     background-clip: text;
     color: transparent;
 }
@@ -117,8 +117,8 @@ h2{
 .h2-grad-services{
     background: linear-gradient(
     to right in oklch, 
-    #ff6660, 
-    #ff486f);
+    #1B6FFF, 
+    #8FB4FF);
     background-clip: text;
     color: transparent;
 }

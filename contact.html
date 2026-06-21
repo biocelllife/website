@@ -66,13 +66,13 @@ fetch('/components/header.html')
         </div>
 
         <div class="contact-form-wrapper">
-            <form action="https://api.web3forms.com/submit" method="POST" id="contactForm" class="contact-form">
+            <form action="https://api.web3forms.com/submit" method="POST" id="form" class="contact-form">
             <input type="hidden" name="access_key" value="c219ab6d-363c-4377-b464-fb4791802fbb">
 
                 <div class="form-row">
                     <div class="field">
                         <label>First Name</label>
-                        <input type="text" name="firstName" required>
+                        <input type="text" name="firstName" placeholder="Required" required>
                     </div>
 
                     <div class="field">
@@ -95,7 +95,7 @@ fetch('/components/header.html')
 
                 <div class="field">
                     <label>How can we help?</label>
-                    <select name="service">
+                    <select name="service" required>
                         <option>Select an option</option>
                         <option>Wound Care</option>
                         <option>Pain Management</option>
@@ -106,12 +106,7 @@ fetch('/components/header.html')
 
                 <div class="field">
                     <label>Message</label>
-                    <textarea
-                        name="message"
-                        rows="6"
-                        placeholder="Tell us about your situation..."
-                        required
-                    ></textarea>
+                    <textarea name="message" rows="6" placeholder="Tell us about your situation..." required></textarea>
                 </div>
 
                 <button type="submit" class="btn-submit">

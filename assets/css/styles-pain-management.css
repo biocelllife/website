@@ -6,7 +6,7 @@
     --line:#e5e5e7;
     --light:#F5F7FA;
     --accent:#0a84ff;
-    --gradient:linear-gradient(135deg,#4381ff 0%,#1d4ed8 100%);
+    --gradient:linear-gradient(90deg, #1B66FF 0%, #8fb4ff 100%);
 }
 
 *{
