@@ -29,6 +29,12 @@ max-width:1200px;
 margin:auto;
 }
 
+#header{
+position:sticky;
+top:0;
+z-index:1000;
+}
+
 .header{
 background: rgba(255, 255, 255, 0.7);
 border-bottom:1px solid var(--light);
@@ -37,6 +43,12 @@ top:0;
 z-index:1000;
 backdrop-filter: blur(18px);
 -webkit-backdrop-filter: blur(18px);
+}
+
+#header .header{
+position:relative;
+top:auto;
+z-index:auto;
 }
 
 .section{
