@@ -118,12 +118,12 @@ gap:0;
 padding: 20px;
 }
 
-/* actual text container */
+/* Actual text container */
 .hero-text-inner{
   max-width:1400px;
 }
 
-/* Stack feature cards on mobile */
+/* Stack feature cards */
 .services-features{
   grid-template-columns:1fr;
   gap:20px;
@@ -337,9 +337,66 @@ gap:0;
   text-align: right;
 }
 
+/* About sections */
+
+  .team-container {
+    grid-template-columns: 1fr;
+  }
+
+  .ceo {
+    grid-column: span 1;
+  }
+
+  .employee-card {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .employee-card img {
+    width: 100%;
+    height: auto;
+  }
+
+  .about-section {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .about-title h1 {
+    font-size: 3.5rem;
+  }
+
+    .staff-title {
+    font-size: 2.25rem;
+    margin-bottom: 20px;
+  }
+
+  .team-container {
+    grid-template-columns: 1fr;
+  }
+
+  .ceo {
+    grid-column: span 1;
+  }
+
+  .employee-card {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .employee-card img {
+    width: 100%;
+    height: auto;
+  }
+
+  .hero-single img {
+    object-fit: cover;
+    object-position: 36% center;
+  }
+
 }
 
-/* Mobile optimization */
+/* ------------------ MAX WIDTH 480px ------------------------------- */
 @media (max-width: 480px) {
   .site-footer {
     padding: 50px 20px 20px;

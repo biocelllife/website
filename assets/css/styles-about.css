@@ -28,7 +28,7 @@
     -webkit-text-fill-color: transparent;
 
     /* Optional: fallback color for non-webkit browsers */
-    color: #4facfe;
+    color: var(--primary);
 }
 
 /* Content Paragraphs */
@@ -48,6 +48,14 @@
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 30px;
+}
+
+.staff-title {
+  text-align: center;
+  font-size: 4rem;
+  line-height: 1.1;
+  margin-bottom: 20px;
+  color: var(--dark);
 }
 
 .employee-card {
@@ -80,27 +88,4 @@
   margin: 5px 0 0;
   color: #666;
   font-size: 14px;
-}
-
-/* Mobile layout */
-@media (max-width: 768px) {
-
-  .team-container {
-    grid-template-columns: 1fr;
-  }
-
-  .ceo {
-    grid-column: span 1;
-  }
-
-  .employee-card {
-    flex-direction: column;
-    text-align: center;
-  }
-
-  .employee-card img {
-    width: 100%;
-    height: auto;
-  }
-
 }
